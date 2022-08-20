@@ -1,0 +1,78 @@
+﻿@using AdminLte.Mvc.Models.Enums
+@model AdminLte.Mvc.Models.ViewModels.AddProjectWithPMViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Project</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Project.Id" />
+            <input type="hidden" asp-for="Project.CompanyId" />
+            <input type="hidden" asp-for="Project.ImageFileData" />
+            <input type="hidden" asp-for="Project.ImageFileName" />
+            <input type="hidden" asp-for="Project.ImageFileContentType" />
+            <div class="form-group">
+                <label asp-for="Project.Name" class="control-label"></label>
+                <input asp-for="Project.Name" class="form-control" />
+                <span asp-validation-for="Project.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Project.Description" class="control-label"></label>
+                <input asp-for="Project.Description" class="form-control" />
+                <span asp-validation-for="Project.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Project.StartDate" class="control-label"></label>
+                <input asp-for="Project.StartDate" class="form-control" />
+                <span asp-validation-for="Project.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Project.EndDate" class="control-label"></label>
+                <input asp-for="Project.EndDate" class="form-control" />
+                <span asp-validation-for="Project.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Choose a priority</label>
+                <select asp-for="Project.ProjectPriorityId" class ="form-control" asp-items="@Model.PriorityList"></select>
+            </div>
+            <label>Image Preview</label>
+            <div>
+                @if (Model.Project?.ImageFileData is not null)
+                {
+                    <img id="imageFileData" class="img-fluid img-thumbnail" style="width: 100px;height: 80px" src="data:image/*;base64,@(Convert.ToBase64String(Model.Project.ImageFileData))"/>
+                }
+                else
+                {
+                    <img id="imageFileData" class="img-fluid img-thumbnail" style="width: 100px;height: 80px" src=""/>
+                }
+            </div>
+            
+            @if (User.IsInRole(Roles.Admin.ToString()))
+            {
+                <div class="form-group">
+                    <label class="control-label">Choose a Project Manager</label>
+                    <select asp-for="PMId" class="form-control" asp-items="@Model.PMList"></select>
+                </div>
+            }
+            
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

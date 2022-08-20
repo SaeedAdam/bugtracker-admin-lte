@@ -1,0 +1,33 @@
+﻿@model IEnumerable<AdminLte.Mvc.Models.ViewModels.ManageUserRolesViewModel>
+
+<div class="row">
+    <h2 class="m-t-0 h3"><b>Manage Member Roles </b></h2>
+        <div class="row">
+            @foreach (var member in Model)
+            {
+                <div class="card col-3 m-3">
+                    <div class="card-body">
+                        <p class="text-muted">
+                            This form displays the current roles assigned to the user: <strong class="text-info">@member.BTUser.FullName</strong>.
+                            Use the dropdown to select the roles this user should be assigned.
+                            Once roles are selected, click "Assign Roles" to submit the form.
+                        </p>
+                        <hr />
+                        <form asp-action="ManageUserRoles" asp-controller="UserRoles" method=post>
+                            <input type="hidden" asp-for="@member.BTUser.Id"/>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label asp-for="@member.Roles" class="form-label">Roles for @member.BTUser.FullName</label>
+                                    <select asp-for="@member.SelectedRoles" class="form-select" asp-items="@member.Roles" multiple></select>
+                                </div>
+                                <hr/>
+                                <div class="form-group">
+                                    <input type="submit" value="Assign Role" class="btn btn-info"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            }
+    </div>
+</div>

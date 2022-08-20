@@ -1,0 +1,41 @@
+﻿@model AdminLte.Mvc.Models.ViewModels.ProjectsMemberViewModel
+
+
+@{
+    ViewData["Title"] = "Assign Members";
+}
+
+<h1>Project : @Model.Project.Name</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <form asp-action="AssignMembers" asp-controller="Projects" method="post">
+                    <input asp-for="Project.Id" hidden=""/>
+
+                    <p>@Model.Project.Name</p>
+
+                    <p>@Model.Project.Description</p>
+
+                    <hr/>
+
+                    <div class="form-group">
+                        <label class="control-label">Select Users</label>
+                        <select required asp-for="SelectedUsers" class="form-control" asp-items="@Model.Users" multiple="multiple">
+                            <option></option>
+                        </select>
+
+                        <input class="btn btn-primary btn-sm mt-2" value="Assign" type="submit"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-sm btn-outline-dark mt-2" asp-action="Details" asp-controller="Projects" asp-route-id="@Model.Project.Id">Back to Details</a>
+</div>
