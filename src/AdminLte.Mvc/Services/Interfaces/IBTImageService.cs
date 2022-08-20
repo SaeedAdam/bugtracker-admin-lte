@@ -1,4 +1,6 @@
-﻿namespace AdminLte.Mvc.Services.Interfaces;
+﻿using Microsoft.AspNetCore.Http;
+
+namespace AdminLte.Mvc.Services.Interfaces;
 
 public interface IBTImageService
 {

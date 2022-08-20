@@ -1,4 +1,5 @@
-﻿using AdminLte.Mvc.Models;
+﻿using AdminLte.Mvc.Extensions;
+using AdminLte.Mvc.Models;
 using AdminLte.Mvc.Models.ViewModels;
 using AdminLte.Mvc.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;

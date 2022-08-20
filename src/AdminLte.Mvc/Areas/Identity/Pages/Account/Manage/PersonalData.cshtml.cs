@@ -1,12 +1,13 @@
 ﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
-using BugTracker.Models;
+using AdminLte.Mvc.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
 
-namespace BugTracker.Areas.Identity.Pages.Account.Manage;
+namespace AdminLte.Mvc.Areas.Identity.Pages.Account.Manage;
 
 public class PersonalDataModel : PageModel
 {

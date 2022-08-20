@@ -2,16 +2,16 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using BugTracker.Models;
+using System.Text;
+using AdminLte.Mvc.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
-using System.Text;
 
-namespace BugTracker.Areas.Identity.Pages.Account;
+namespace AdminLte.Mvc.Areas.Identity.Pages.Account;
 
 [AllowAnonymous]
 public class RegisterConfirmationModel : PageModel

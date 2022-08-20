@@ -1,6 +1,5 @@
 ﻿using AdminLte.Mvc.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 
 namespace AdminLte.Mvc.Data;
 

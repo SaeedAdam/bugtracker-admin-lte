@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
 using System.Security.Principal;
 
-namespace BugTracker.Extensions;
+namespace AdminLte.Mvc.Extensions;
 
 public static class IdentityExtensions
 {

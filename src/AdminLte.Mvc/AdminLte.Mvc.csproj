@@ -118,6 +118,11 @@
 	  <None Include="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
 	  <None Include="Areas\Identity\Pages\_ViewImports.cshtml" />
 	  <None Include="Areas\Identity\Pages\_ViewStart.cshtml" />
+	  <None Include="Views\Companies\Create.cshtml" />
+	  <None Include="Views\Companies\Delete.cshtml" />
+	  <None Include="Views\Companies\Details.cshtml" />
+	  <None Include="Views\Companies\Edit.cshtml" />
+	  <None Include="Views\Companies\Index.cshtml" />
 	</ItemGroup>
 
 </Project>

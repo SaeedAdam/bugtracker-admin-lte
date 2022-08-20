@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.IO;
+using Microsoft.AspNetCore.Http;
 
-namespace BugTracker.Extensions;
+namespace AdminLte.Mvc.Extensions;
 
 public class MaxFileSizeAttribute : ValidationAttribute
 {

@@ -1,4 +1,6 @@
-﻿@inject SignInManager<BTUser> SignInManager
+﻿@using AdminLte.Mvc.Areas.Identity.Pages.Account.Manage
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@inject SignInManager<BTUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }

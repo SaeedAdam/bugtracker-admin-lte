@@ -1,9 +1,5 @@
-﻿using System.Linq;
-using AdminLte.Mvc.Models;
+﻿using AdminLte.Mvc.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
-using AdminLte.Mvc.Data;
 
 namespace AdminLte.Mvc.Controllers;
 

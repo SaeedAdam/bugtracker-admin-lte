@@ -2,13 +2,14 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using BugTracker.Models;
+using System.ComponentModel.DataAnnotations;
+using AdminLte.Mvc.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.ComponentModel.DataAnnotations;
+using Microsoft.Extensions.Logging;
 
-namespace BugTracker.Areas.Identity.Pages.Account.Manage;
+namespace AdminLte.Mvc.Areas.Identity.Pages.Account.Manage;
 
 public class DeletePersonalDataModel : PageModel
 {

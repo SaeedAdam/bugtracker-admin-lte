@@ -1,7 +1,6 @@
 ﻿using AdminLte.Mvc.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 
 namespace AdminLte.Mvc.Controllers;
 

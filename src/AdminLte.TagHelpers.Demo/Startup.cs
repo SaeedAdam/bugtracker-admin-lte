@@ -10,7 +10,6 @@ namespace AdminLte.TagHelpers.Demo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages()
-                .AddRazorRuntimeCompilation()
                 .AddRazorPagesOptions(options =>
                 {
                     options.Conventions.AddPageRoute("/Home/Index", "");
